@@ -925,7 +925,7 @@ function $CompileProvider($provide) {
           stableNodeList.push(nodeList[i]);
         }
 
-        for(i = 0, n = 0, ii = linkFns.length; i < ii; n++) {
+        for(i = 0, n = 0, ii = linkFns.length, nn = stableNodeList.length; i < ii && n < nn; n++) {
           node = stableNodeList[n];
           nodeLinkFn = linkFns[i++];
           childLinkFn = linkFns[i++];
